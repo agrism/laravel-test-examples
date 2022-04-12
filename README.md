@@ -1,6 +1,6 @@
 ## Testable cases:
 
-###1. Service without constructor
+### 1. Service without constructor
 ```php
 Route::get('/test-service-without-construct', function () {
     return app(ExampleServiceWithoutConstructor::class)->render();
@@ -9,7 +9,7 @@ Route::get('/test-service-without-construct', function () {
 Tests: [Tests Service without constructor](./tests/Feature/TestServiceWithoutConstructTest.php)
 
 
-###2. Service with constructor
+### 2. Service with constructor
 ```php
 Route::get('/test-service-with-construct', function () {
     return app(ExampleServiceWithConstructor::class, [
@@ -20,7 +20,7 @@ Route::get('/test-service-with-construct', function () {
 Tests: [Tests Service with constructor](./tests/Feature/TestServiceWithConstructTest.php)
 
 
-###3. Service with dependency in constructor
+### 3. Service with dependency in constructor
 ```php
 Route::get('/test-service-with-construct-and-dependency', function () {
     return app(ExampleServiceWithConstructorDependency::class, [
