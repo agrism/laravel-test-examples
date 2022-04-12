@@ -18,8 +18,8 @@ Route::get('/test-service-with-construct', function () {
 
 Route::get('/test-service-with-construct-and-dependency', function () {
     return app(ExampleServiceWithConstructorDependency::class, [
-        'exampleDependency' => app(ExampleDependency::class
-        )])->render();
+        'exampleDependency' => app(ExampleDependency::class)
+    ])->render();
 });
 
 Route::get('/', function () {
