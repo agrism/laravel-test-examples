@@ -32,8 +32,6 @@ Route::get('/test-service-with-construct-and-dependency', function () {
 
 ### test examples:
 
-```php
-./tests/Feature/TestServiceWithConstructTest.php
-./tests/Feature/TestServiceWithoutConstructTest.php
-./tests/Feature/TestServiceWithConstructDependencyTest.php
-```
+- [Tests Service without constructor](./tests/Feature/TestServiceWithoutConstructTest.php)
+- [Tests Service with constructor](./tests/Feature/TestServiceWithConstructTest.php)
+- [Tests Service with dependency in constructor](./tests/Feature/TestServiceWithConstructDependencyTest.php)
