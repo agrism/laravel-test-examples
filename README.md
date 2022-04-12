@@ -1,4 +1,4 @@
-## About Laravel
+## Testable cases:
 
 - test Services without __construct
 - test Services with __construct
