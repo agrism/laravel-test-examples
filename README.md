@@ -14,16 +14,19 @@ use App\Services\ExampleServiceWithConstructorDependency;
 use App\Services\ExampleDependency;
 
 Route::get('/test-service-without-construct', function () {
+    // case 1
     return app(ExampleServiceWithoutConstructor::class)->render();
 });
 
 Route::get('/test-service-with-construct', function () {
+    // case 2
     return app(ExampleServiceWithConstructor::class, [
         'message' => 'msg native set'
     ])->render();
 });
 
 Route::get('/test-service-with-construct-and-dependency', function () {
+    // case 3
     return app(ExampleServiceWithConstructorDependency::class, [
         'exampleDependency' => app(ExampleDependency::class
         )])->render();
@@ -32,6 +35,8 @@ Route::get('/test-service-with-construct-and-dependency', function () {
 
 ### test examples:
 
-- [Tests Service without constructor](./tests/Feature/TestServiceWithoutConstructTest.php)
-- [Tests Service with constructor](./tests/Feature/TestServiceWithConstructTest.php)
-- [Tests Service with dependency in constructor](./tests/Feature/TestServiceWithConstructDependencyTest.php)
+Case 1. [Tests Service without constructor](./tests/Feature/TestServiceWithoutConstructTest.php)
+
+Case 2. [Tests Service with constructor](./tests/Feature/TestServiceWithConstructTest.php)
+
+Case 3. [Tests Service with dependency in constructor](./tests/Feature/TestServiceWithConstructDependencyTest.php)
